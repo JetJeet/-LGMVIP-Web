@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <h2 class="rox">दिनचर्या.com</h2>
+      <p>
+        Developed by<a
+          class="bash"
+          href="www.linkedin.com/in/vishwajeet-chavan-8b4202218"
+          >Vishwajeet Chavan</a
+        >
+        under<a
+          class="bash"
+          href="https://www.linkedin.com/search/results/all/?fetchDeterministicClustersOnly=false&heroEntityKey=urn%3Ali%3Aorganization%3A74833942&keywords=letsgrowmore&origin=RICH_QUERY_SUGGESTION&position=0&searchId=d68a3848-0d02-429d-9575-9a425584c200&sid=xYr"
+          >Let's Grow More</a
+        >
+      </p>
+      <br /><br />
+      <form id="new-task-form">
+        <input
+          type="text"
+          name="new-task-input"
+          id="new-task-input"
+          placeholder=" What I am gonna do today?"
+        />
+        <input type="submit" id="new-task-submit" value="Add task" />
+      </form>
+    </header>
+    <main>
+      <section class="">
+        <h2 class="pox">Things to do yet...</h2>
+        <br />
+        <br />
+
+        <div id="tasks">
+          <div class="task">
+            <div class="content">
+              <input type="text" class="text" value="A new task" readonly />
+            </div>
+            <div class="actions">
+              <button class="edit">Edit</button>
+              <button class="delete">Delete</button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>
