@@ -4,31 +4,37 @@
     <title>Calculator</title>
     <link rel="stylesheet" type="text/css" href="style.css" />
   </head>
-  <body>
+  <body class="opp">
+    <h1 class="opt">Calci.com</h1>
+    <p class="pt">
+      Developed by Vishwajeet Chavan under
+      <a class="hix" href="https://letsgrowmore.in/">Let's Grow More.</a>
+    </p>
+
     <div class="calculator">
       <div class="screen">
-        <input type="text" id="result" placeholder="0" disabled />
+        <input class="tar" type="text" id="result" placeholder="0" disabled />
       </div>
       <div class="buttons">
-        <button onclick="clearScreen()">C</button>
-        <button onclick="addToScreen('(')">(</button>
-        <button onclick="addToScreen(')')">)</button>
-        <button onclick="addToScreen('/')">÷</button>
-        <button onclick="addToScreen('7')">7</button>
-        <button onclick="addToScreen('8')">8</button>
-        <button onclick="addToScreen('9')">9</button>
-        <button onclick="addToScreen('*')">×</button>
-        <button onclick="addToScreen('4')">4</button>
-        <button onclick="addToScreen('5')">5</button>
-        <button onclick="addToScreen('6')">6</button>
-        <button onclick="addToScreen('-')">-</button>
-        <button onclick="addToScreen('1')">1</button>
-        <button onclick="addToScreen('2')">2</button>
-        <button onclick="addToScreen('3')">3</button>
-        <button onclick="addToScreen('+')">+</button>
-        <button onclick="addToScreen('0')">0</button>
-        <button onclick="addToScreen('.')">.</button>
-        <button onclick="calculate()">=</button>
+        <button class="ed" onclick="clearScreen()">C</button>
+        <button class="ed" onclick="addToScreen('(')">(</button>
+        <button class="ed" onclick="addToScreen(')')">)</button>
+        <button class="ed" onclick="addToScreen('/')">÷</button>
+        <button class="re" onclick="addToScreen('7')">7</button>
+        <button class="re" onclick="addToScreen('8')">8</button>
+        <button class="re" onclick="addToScreen('9')">9</button>
+        <button class="ed" onclick="addToScreen('*')">×</button>
+        <button class="re" onclick="addToScreen('4')">4</button>
+        <button class="re" onclick="addToScreen('5')">5</button>
+        <button class="re" onclick="addToScreen('6')">6</button>
+        <button class="ed" onclick="addToScreen('-')">-</button>
+        <button class="re" onclick="addToScreen('1')">1</button>
+        <button class="re" onclick="addToScreen('2')">2</button>
+        <button class="re" onclick="addToScreen('3')">3</button>
+        <button class="ed" onclick="addToScreen('+')">+</button>
+        <button class="re" onclick="addToScreen('0')">0</button>
+        <button class="ed" onclick="addToScreen('.')">.</button>
+        <button class="ed" onclick="calculate()">=</button>
       </div>
     </div>
 
