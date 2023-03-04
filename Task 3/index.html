@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Registration Form</title>
+    <style>
+      table,
+      th,
+      td {
+        border: 1px solid black;
+        border-collapse: collapse;
+      }
+      .ii{
+        text-decoration: solid;
+        text-align: center;
+      }
+      .rr{
+        text-align: center;
+        table-layout: auto;
+        padding: 2px;
+        background-color: aquamarine;
+        color: black;
+      }
+      th,
+      td {
+        padding: 10px;
+        text-align: left;
+      }
+      .pop{
+        text-align: center;
+        font-size: 30px;
+      }
+     .pi{
+      text-align: center;
+      text-decoration: none;
+      color:coral;
+      text-decoration: none;
+
+     }
+      .po{
+        text-align: center;
+        text-decoration: solid;
+        font-size: 60px;
+        margin:0px ;
+        font-family:Georgia, 'Times New Roman', Times, serif;
+      }
+      .ooo{
+        background-color: black;
+        color: aliceblue;
+        padding-left: 50px;
+        padding-right: 50px;
+        width: 600px;
+        
+      }
+    </style>
+  </head>
+  <body background="https://img.freepik.com/free-vector/large-school-building-scene_1308-32058.jpg?w=1060&t=st=1677914801~exp=1677915401~hmac=3af46c3995f4ad24463bdfc19010ba89e2ca76561b624be4ea44c235cae603b4">
+    <h1 class="po"> VC'S SCHOOL OF ENGINEERING, INDIA</h1>
+    <p class="pi">Developed by<a class="pi" href="https://www.linkedin.com/in/vishwajeet-chavan-8b4202218/">Vishwajeet Chavan</a>  under <a  class="pi" href="https://www.linkedin.com/company/letsgrowmore/">Let's Grow More</a></p>
+    <center>
+      <form  class="ooo" id="registration-form" action="#" method="post">
+        <fieldset > 
+         <legend class="pop">REGISTRATION FORM</legend><label for="name">Name:</label>
+         <input type="text" id="name" name="name" required /><br /><br />
+         <label for="class">Class:</label>
+         <input type="text" id="class" name="class" required /><br /><br />
+         <label for="email">Email ID:</label>
+         <input type="email" id="email" name="email" required /><br /><br />
+         <label for="gender">Gender:</label>
+         <input type="radio" id="male" name="gender" value="male" required />
+         <label for="male">Male</label>
+         <input type="radio" id="female" name="gender" value="female" />
+         <label for="female">Female</label>
+         <input type="radio" id="other" name="gender" value="other" />
+         <label for="other">Other</label><br /><br />
+         <label for="stack">Stack:</label>
+         <select id="stack" name="stack" required>
+           <option value="MERN STACK DEVELOPER">MERN STACK DEVELOPER</option>
+           <option value="FULL STACK JAVA DEVELOPER">FULL STACK JAVA DEVELOPER</option>
+           <option value="DATA SCIENCE">DATA SCIENCE </option>
+           <option value="DEVOPS ENGINEER">DEVOPS ENGINEER</option></select
+         ><br /><br />
+         <input type="submit" value="Register" />
+      </fieldset>
+    </center> </form>
+    <br />
+    <h2 class="ii">Registration Data</h2>
+    <center><table class="rr" id="registration-data">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Class</th>
+          <th>Email ID</th>
+          <th>Gender</th>
+          <th>Stack</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table></center>
+    <script>
+      const form = document.getElementById("registration-form");
+      const tableBody = document.querySelector("#registration-data tbody");
+      form.addEventListener("submit", (event) => {
+        event.preventDefault();
+        const name = document.getElementById("name").value;
+        const className = document.getElementById("class").value;
+        const email = document.getElementById("email").value;
+        const gender = document.querySelector(
+          'input[name="gender"]:checked'
+        ).value;
+        const stack = document.getElementById("stack").value;
+        const row = tableBody.insertRow();
+        const nameCell = row.insertCell();
+        const classCell = row.insertCell();
+        const emailCell = row.insertCell();
+        const genderCell = row.insertCell();
+        const stackCell = row.insertCell();
+        nameCell.textContent = name;
+        classCell.textContent = className;
+        emailCell.textContent = email;
+        genderCell.textContent = gender;
+        stackCell.textContent = stack;
+        form.reset();
+      });
+    </script>
+  </body>
+</html>
